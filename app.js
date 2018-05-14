@@ -12,12 +12,13 @@ $(document).ready(function(){
 			count++; // incrémente à chaque click sur l'image du cake
 			console.log(count);
 			$('span').text(count); // modifie le texte compteur en prenant en compte l'incrémentation
+			if ((count % 20) == 0){ //Si le nombre de click est un multiple de 20 alors (ça prends 0 mais pas le reste (20,40,60, etc), je ne comprends pas)
+				var randomList = list[Math.floor(Math.random() * list.length)]; // Ma variable fait un random de l'index pour sortir une phrase du tableau list
+				console.log(randomList);
+				alert(randomList); // affiche une phrase au hasard
+			}
+		
 		});
-		if ((count % 20) == 0){ //Si le nombre de click est un multiple de 20 alors (ça prends 0 mais pas le reste (20,40,60, etc), je ne comprends pas)
-			var randomList = list[Math.floor(Math.random() * list.length)]; // Ma variable fait un random de l'index pour sortir une phrase du tableau list
-			console.log(randomList);
-			alert(randomList); // affiche une phrase au hasard
-		}
 	
 	});
 	/* 
